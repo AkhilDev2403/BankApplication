@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+     <!-- JavaScript Bundle with Popper -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+     crossorigin="anonymous"></script>
+
+ <!--Awsome fonts-->
+ <script src="https://kit.fontawesome.com/476047b5bb.js" crossorigin="anonymous"></script>
+ 
+ <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css2?family=Boogaloo&family=Lilita+One&display=swap" rel="stylesheet">
+
+  <script src="script.js" defer></script>
+  <title>login</title>
+  <style>
+    .login-btn {
+      text-align: center;
+    }
+
+    .nav1{
+      margin-top: 90px;
+    }
+
+    .btn {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .login-div {
+      margin-top: 150px;
+    }
+
+    .nav-item a {
+      color: white;
+    }
+
+    .nav-item a:hover {
+      color: black;
+    }
+
+    .btn1{
+      color: white;
+    }
+    .btn1:hover{
+      color: black;
+    }
+    h1{
+      text-align: center;
+      font-family: 'Boogaloo', cursive;
+    }
+
+  </style>
+</head>
+
+<body style="background-color: rgb(26, 237, 181);">
+
+  <h1 class="mt-4"><u> Bank Application </u></h1>
+
+  <nav class="navbar navbar-expand-lg fixed-top nav1" style="background-color: #7952b3;">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="BankIndex.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="javascript:balanceEnquiry()">View Balance</a>
+          </li>
+
+          <li class="nav-item">
+            <button class="btn btn1" href="" data-bs-toggle="modal" data-bs-target="#transfer_fund">Fund Transfer</button>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="">Payment History</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="javascript:logout()" id="litem"></a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Modal -->
+<div class="modal fade" id="transfer_fund" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Transfer Fund</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div><input type="number" class="form-control" name="" id="to_accnt" placeholder="Enter To Account Number"></div>
+       <div><input type="number" class="form-control" name="" id="cnfm" placeholder="Confirm To Account Number"></div> 
+       <div><input type="number" class="form-control" name="" id="amount" placeholder="Amount"></div> 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+        <button type="button" onclick="fundTransfer()" class="btn btn-primary">Proceed</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <div class="container">
+    <div class="login-div">
+
+    </div>
+  </div>
+</body>
+
+</html>
